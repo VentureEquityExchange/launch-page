@@ -4,6 +4,7 @@ contract VEXMembers {
     uint public memberLimit;
     uint public numMembers;
 
+    mapping(address => uint) public amountDonated;
     mapping(address => bool) public member;
 
     function VEXMembers() {

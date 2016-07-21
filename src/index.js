@@ -11,7 +11,7 @@ import thunk from 'redux-thunk';
 
 
 // Import component to your project
-let { Main } = Components;
+let { Body } = Components;
 
 const reducer = combineReducers({...Reducers});
 const store = createStore(reducer, applyMiddleware(thunk));
@@ -19,7 +19,7 @@ const store = createStore(reducer, applyMiddleware(thunk));
 ReactDOM.render(
   <Provider store={store}>
     <div>
-        <Main />
+        <Body />
     </div>
   </Provider>, document.getElementById('app'));
 
