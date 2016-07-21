@@ -1,20 +1,27 @@
 const DEFAULT_MEMBER_STATE = {
-  members : [],
+  isMember : undefined,
   error : undefined,
+  txHash : undefined
 }
 
 export default function Members(state = DEFAULT_MEMBER_STATE, action) {
   switch(action.type) {
-    case 'GET_MEMBERS' :
+    case 'IS_MEMBER' :
       return {
         ...state,
-        members : action.members,
+        isMember : action.isMember,
       };
       break;
-    case 'ERROR' :
+    case 'MEMBER_ERROR' :
       return {
         ...state,
         error : action.error,
+      };
+      break;
+    case 'PURCHASING_MEMBERSHIP':
+      return {
+        ...state,
+        txHash : action.txHash,
       };
       break;
     default :

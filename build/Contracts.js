@@ -8,11 +8,8 @@ const jsonfile = Promise.promisifyAll(require('jsonfile'));
 
 fs.readdirAsync(solidityDirectory).then((contracts) => {
   async.forEach(contracts, (contract, cb) => {
-    console.log(contract);
     fs.readFileAsync(`${solidityDirectory}/${contract}`, 'utf-8').then((src) => {
-      console.log(src);
       let compiled = solc.compile(src, 1);
-      console.log(compiled);
       if(!compiled.contracts) {
         throw compiled;
       } else {
@@ -28,7 +25,7 @@ fs.readdirAsync(solidityDirectory).then((contracts) => {
   }, (error) => {
     if(error) { throw error; }
     console.log('Files have been saved');
-  })
+  });
 }).catch((error) => {
   console.log(error);
 });
