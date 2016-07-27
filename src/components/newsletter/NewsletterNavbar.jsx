@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as Actions from '../../actions/index';
 import { Navbar, Nav, MenuItem, NavItem, NavDropdown } from 'react-bootstrap';
 
-class DirectorateNavbarComponent extends Component {
+class NewsletterNavbarComponent extends Component {
   constructor(props){
     super(props);
   }
@@ -20,10 +20,10 @@ class DirectorateNavbarComponent extends Component {
 
   render(){
     return (
-      <Navbar inverse style={{marginTop : '-24px'}}>
+      <Navbar style={{marginTop : '-24px'}}>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#">VΞX | <strong>DIRΞCTORATΞ</strong></a>
+            <a href="#">VΞX | <strong>NΞWSLΞTTΞR</strong></a>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
@@ -50,6 +50,6 @@ const mapStoreToProps = (store) => {
   };
 }
 
-const DirectorateNavbar = connect(mapStoreToProps)(DirectorateNavbarComponent);
+const NewsletterNavbar = connect(mapStoreToProps)(NewsletterNavbarComponent);
 
-export default DirectorateNavbar;
+export default NewsletterNavbar;

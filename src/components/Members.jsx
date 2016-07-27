@@ -45,7 +45,7 @@ class MembersComponent extends Component {
     const { dispatch } = this.props;
     setTimeout(() => {
       dispatch(Actions.Views.action('MAIN_VIEW', view));
-    }, 2000);
+    }, 5000);
   }
 
   lookUpAddress() {
@@ -67,7 +67,7 @@ class MembersComponent extends Component {
           />
         <FormControl.Feedback />
         { Members.isMember ?
-          <HelpBlock style={{fontSize : '18px'}}>Thank you for supporting the development of VΞX {this.updateView('Directorate')}</HelpBlock> :
+          <HelpBlock style={{fontSize : '18px'}}>Thank you for supporting the development of VΞX {this.updateView('Newsletter')}</HelpBlock> :
           <HelpBlock style={{fontSize : '18px'}}><a href="#" onClick={this.becomeMember.bind(this)}>Become an alpha member</a> to gain early access.</HelpBlock>
         }
 
@@ -96,13 +96,13 @@ class MembersComponent extends Component {
 
     return (
       <div style={{
-        fontSize : '48px',
+        fontSize : '36px',
         fontWeight : 100,
         textAlign : 'center',
-        width : '470px',
+        width : '500px',
         margin : 'auto'
       }}>
-        <p style={{marginBottom : '-10px', marginTop : '144px'}}>VΞX | DIRECTORATE</p>
+        <p style={{marginBottom : '-10px', marginTop : '144px'}}>VΞX | Venture Equity Exchange</p>
         { txHash && !isMember ?
           <div style={{fontSize : '18px', fontWeight : 100}}>
             <p>Confirming membership... {this.confirmMembership()}</p>

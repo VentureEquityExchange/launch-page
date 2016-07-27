@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Members, DirectorateMain } from '../index';
+import { Members, DirectorateMain, TradeDeskMain, NewsletterMain } from '../index';
 
 class BodyComponent extends Component {
   constructor(props){
@@ -19,6 +19,10 @@ class BodyComponent extends Component {
         return (<Members />);
       case 'Directorate':
         return (<DirectorateMain />);
+      case 'TradeDesk':
+        return (<TradeDeskMain />);
+      case 'Newsletter':
+        return (<NewsletterMain />);
       default:
         return (<Members />);
     }
