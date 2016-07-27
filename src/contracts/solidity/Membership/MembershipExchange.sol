@@ -3,7 +3,7 @@ import "StandardToken.sol";
 import "MembershipToken.sol";
 import "MembershipAuction.sol";
 
-contract MembershipExchange is Token, StandardToken, MembershipToken(100), MembershipAuction(1 ether) {
+contract MembershipExchange is Token, StandardToken, MembershipToken(100), MembershipAuction(1 ether, 100 days, 10 days) {
 
     struct Ask {
         address seller;

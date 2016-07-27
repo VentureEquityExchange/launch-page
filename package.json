@@ -40,7 +40,6 @@
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "solc": "^0.3.5",
-    "web3": "^0.17.0-alpha",
-    "web3-react-redux": "github:ventureequityexchange/web3-react-redux"
+    "web3": "^0.17.0-alpha"
   }
 }
